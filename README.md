@@ -1,4 +1,25 @@
-# 📨 Contact form Backend (Cloudflare workers)
+<p align="center">
+  <img src="https://img.shields.io/badge/Serverless-Cloudflare%20Workers-f38020?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Storage-Cloudflare%20KV-0f72e5?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Security-Admin%20Panel%20With%20One–Time%20Links-00ffc3?style=for-the-badge" />
+</p>
+
+# Contact form Backend (Cloudflare workers)
+<p align="center">
+  <a href="#">
+    <img src="https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" />
+  </a>
+  <a href="https://dash.cloudflare.com">
+    <img src="https://img.shields.io/badge/Cloudflare-Workers%20%2B%20KV-f38020?style=flat-square" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/status-production--ready-00ffc3?style=flat-square" />
+  </a>
+</p>
+
 
 A lightweight, privacy-focused backend for handling contact form submissions using **Cloudflare Workers** + **KV Storage**.  
 Includes:
