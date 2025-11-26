@@ -1,9 +1,21 @@
-# Wrangler output
-.wrangler/
-
-# Local wrangler.toml (contains your real KV IDs)
-wrangler.toml
-
-# OS files
+# Node / general
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
 .DS_Store
 Thumbs.db
+
+# Cloudflare / Wrangler
+wrangler.toml
+.wrangler/
+.env
+.env.local
+.dev.vars
+.dev.vars.local
+
+# Editor / OS
+.vscode/
+.idea/
+*.log
