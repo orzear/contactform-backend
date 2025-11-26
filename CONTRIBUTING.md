@@ -1,4 +1,4 @@
-# Contributing to Contact Backend
+# Contributing to contactform-backend
 
 Thank you for your interest in contributing! 🙌
 
