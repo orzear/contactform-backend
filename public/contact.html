@@ -1,0 +1,113 @@
+<!-- Please note that this is an example contact form for demo purposes.
+     Replace this with your own UI in production. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background: #111;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #1b1b1b;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.form-input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #131313;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 15px;
+}
+
+textarea {
+  height: 140px;
+  resize: none;
+}
+
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: #00ffc3;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+  transition: 0.2s ease;
+}
+
+.form-btn:hover {
+  opacity: 0.85;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- IMPORTANT:
+  This is only a demo form.
+
+  If you deploy this project:
+  Replace "/api/contact" with your actual Cloudflare Worker endpoint.
+
+  Example:
+  action="https://your-worker-name.workers.dev/api/contact"
+-->
+
+<form action="/api/contact" method="POST" class="form">
+
+  <!-- Honeypot anti-bot field -->
+  <input type="text" name="website" autocomplete="off" tabindex="-1" style="display:none;">
+
+  <!-- Auto-filled by JS -->
+  <input type="hidden" name="client_tz">
+  <input type="hidden" name="client_time">
+
+  <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+  <input type="email" name="email" class="form-input" placeholder="Email address" required>
+
+  <textarea name="message" class="form-input" placeholder="Your message" required></textarea>
+
+  <button class="form-btn" type="submit">
+    <span>Send Message</span>
+  </button>
+
+</form>
+
+<script>
+// Fill timezone + client time automatically
+document.querySelector("input[name='client_tz']").value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+document.querySelector("input[name='client_time']").value = new Date().toLocaleString();
+</script>
+
+</body>
+</html>
