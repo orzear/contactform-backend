@@ -1,0 +1,9 @@
+# Wrangler output
+.wrangler/
+
+# Local wrangler.toml (contains your real KV IDs)
+wrangler.toml
+
+# OS files
+.DS_Store
+Thumbs.db
