@@ -1,0 +1,73 @@
+# ============================================================================
+# This is only an example file.
+#
+# If you want to deploy this project:
+# 1. Make a copy of this file
+# 2. Rename it to: wrangler.toml
+# 3. Replace the placeholder values with your own
+#
+# Do NOT put any passwords or private info in this file.
+# ============================================================================
+
+name = "portfolio-backend" # Or whatever your project name is.
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+# ============================================================================
+# KV STORAGE (required)
+#
+# This project needs two KV storages:
+#   - One for storing messages (MSGS)
+#   - One for storing login sessions (AUTH)
+#
+# HOW TO CREATE THEM:
+# Go to: https://dash.cloudflare.com/ > Workers > KV > Create Namespace
+#
+# Make two namespaces:
+#   1) "AUTH"
+#   2) "MSGS"
+#
+# After creating each one, Cloudflare will show you an "ID".
+# Copy those IDs and paste them below.
+# ============================================================================
+
+kv_namespaces = [
+  { binding = "AUTH", id = "PASTE_AUTH_KV_ID_HERE" },
+  { binding = "MSGS", id = "PASTE_MSGS_KV_ID_HERE" }
+]
+
+# ============================================================================
+# SETTINGS
+#
+# PANEL_TTL_SECONDS controls how long the one-time admin panel link is valid.
+# 900 seconds = 15 minutes.
+# ============================================================================
+
+[vars]
+PANEL_TTL_SECONDS = 900
+
+
+# ============================================================================
+# SECRETS (very important)
+#
+# DO NOT PUT YOUR PASSWORDS IN THIS FILE.
+#
+# Instead:
+#   1) Install Cloudflare's CLI ("Wrangler") if you want to use it
+#   2) Run these commands:
+#
+#      wrangler secret put ADMIN_USER
+#      wrangler secret put ADMIN_PASSWORD
+#
+# These store your login details safely inside Cloudflare.
+#
+# If you are using the Cloudflare Dashboard instead of Wrangler CLI:
+#   Go to:
+#     Workers → Your Worker → Settings → Variables → Secrets
+#
+# And create:
+#     ADMIN_USER
+#     ADMIN_PASSWORD
+# ============================================================================
+
+# End of file
