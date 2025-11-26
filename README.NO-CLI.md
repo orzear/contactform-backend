@@ -25,7 +25,7 @@ This backend fits well within these limits.
 
 ---
 
-# 📦 What You Get
+# 📦 What you get
 
 This backend handles:
 
@@ -41,7 +41,7 @@ All you need is Cloudflare.
 
 ---
 
-# ⚙️ Step-by-Step Setup (Dashboard Only)
+# ⚙️ Step-by-step setup (Dashboard only)
 
 ## 1️⃣ Create a new Worker  
 Go to:
@@ -51,7 +51,7 @@ Go to:
 Name it something like:
 
 ```
-portfolio-backend
+contactform-backend
 ```
 
 Choose **"Create Worker"**.
@@ -91,11 +91,11 @@ Keep this tab open — you will need the IDs soon.
 
 ---
 
-## 4️⃣ Add KV Bindings to Your Worker
+## 4️⃣ Add KV bindings to your worker
 
 Open:
 
-**Workers → portfolio-backend → Settings → Bindings → KV Namespace Bindings**
+**Workers → contactform-backend → Settings → Bindings → KV Namespace Bindings**
 
 Add two items:
 
@@ -113,7 +113,7 @@ MSGS
 
 ---
 
-## 5️⃣ Add Secrets (Admin Username & Password)
+## 5️⃣ Add Secrets (Admin username & password)
 
 Go to:
 
@@ -137,7 +137,7 @@ Choose whatever you want.
 
 ---
 
-## 6️⃣ Add a Public Variable (optional)
+## 6️⃣ Add a public variable (optional)
 
 Still under "Variables":
 
@@ -152,7 +152,7 @@ This controls how long your one-time admin panel link works (in seconds).
 
 ---
 
-## 7️⃣ Upload the Admin Panel HTML
+## 7️⃣ Upload the Admin panel HTML
 
 Because Cloudflare Workers cannot store large HTML files directly inside KV, you will host the admin page using the Worker itself.
 
@@ -165,9 +165,9 @@ You do **not** upload the HTML separately — it is embedded in `worker.js`.
 
 ---
 
-## 8️⃣ Upload Your Contact Form Anywhere
+## 8️⃣ Upload your contact form anywhere
 
-You can host `public/contact.html` on:
+You can host or integrate `public/contact.html` on:
 
 - Your portfolio website
 - Another Worker
@@ -184,7 +184,7 @@ This sends data to your Worker backend.
 
 ---
 
-# 🧪 Test It
+# 🧪 Test it
 
 ### 1. Open your contact form  
 Fill it out and click send.
@@ -208,7 +208,7 @@ This link:
 
 ---
 
-# 🔐 Security Notes
+# 🔐 Security notes
 
 - KV stores messages securely server-side  
 - No cookies  
@@ -223,7 +223,7 @@ This backend is private and secure by default.
 
 ---
 
-# 🧹 Clearing Messages
+# 🧹 Clearing messages
 
 Inside the admin panel you can:
 
